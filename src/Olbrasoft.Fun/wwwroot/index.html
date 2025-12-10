@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olbrasoft.Fun</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+        h1 {
+            color: #e94560;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #e94560;
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.2);
+        }
+        .project-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+        .project-info {
+            text-align: left;
+        }
+        .project-name {
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        .project-description {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+        .footer {
+            margin-top: 3rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #e94560;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Olbrasoft.Fun</h1>
+        <p class="subtitle">Projekty a nástroje od Olbrasoft</p>
+        
+        <div class="projects">
+            <a href="https://github-issues.azurewebsites.net/" class="project-card" target="_blank">
+                <img src="/images/github-issues.png" alt="GitHub Issues" class="project-icon">
+                <div class="project-info">
+                    <div class="project-name">GitHub Issues</div>
+                    <div class="project-description">Sémantické vyhledávání v GitHub Issues pomocí AI embeddings</div>
+                </div>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 <a href="https://github.com/Olbrasoft" target="_blank">Olbrasoft</a></p>
+        </div>
+    </div>
+</body>
+</html>
