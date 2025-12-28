@@ -1,0 +1,17 @@
+[Unit]
+Description=VirtualAssistant Log Viewer (Logdy)
+After=network.target virtual-assistant.service
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sh -c 'fuser -k 5053/tcp 2>/dev/null || true'
+ExecStart=/home/jirka/.local/bin/start-log-viewer.sh
+Restart=always
+RestartSec=5
+KillMode=mixed
+TimeoutStopSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
