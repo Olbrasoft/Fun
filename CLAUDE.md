@@ -43,8 +43,7 @@ Logs: `journalctl --user -u virtual-assistant.service -f`
 Clean Architecture with CQRS pattern:
 - **VirtualAssistant.Service** - ASP.NET Core main service (port 5055)
 - **VirtualAssistant.Core** - Domain logic, AgentHubService, TaskDistributionService
-- **VirtualAssistant.Voice** - TTS/STT, VAD (Silero ONNX), LLM routing
-- **VirtualAssistant.PushToTalk** - Mouse button monitors (SOLID with Strategy pattern)
+- **VirtualAssistant.Voice** - TTS/STT with inline Whisper.net (GPU-accelerated), VAD (Silero ONNX), LLM routing
 - **VirtualAssistant.Data** - Entities, DTOs
 - **VirtualAssistant.Data.EntityFrameworkCore** - DbContext, migrations (auto-apply on startup)
 - **VirtualAssistant.GitHub** - GitHub API, issue sync with embeddings
