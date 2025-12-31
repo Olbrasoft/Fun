@@ -1,0 +1,16 @@
+[Unit]
+Description=VirtualAssistant Log Viewer (Logdy)
+After=network.target virtual-assistant.service
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sh -c 'fuser -k 5053/tcp || true'
+ExecStartPre=/bin/sleep 1
+ExecStart=/home/jirka/.local/bin/logdy stdin "journalctl --user -u virtual-assistant.service -f --no-pager -o cat" --port 5053 --no-analytics
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
